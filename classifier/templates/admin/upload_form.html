@@ -1,0 +1,24 @@
+{% extends "admin/base_site.html" %} {% block content %}
+<div style="margin: 2em">
+<h1 style="font-size: 1.5em">Upload file</h1>
+  <form method="post" enctype="multipart/form-data" style="margin-top: 1em">
+    {% csrf_token %}
+    <div style="border: 1px solid #ccc; padding: 1em; display: inline-block">
+      {{ form.errors.data_file }}
+      <input type="file" name="data_file" style="margin-bottom: 1em" />
+      <button
+        type="submit"
+        style="
+          padding: 0.5em 1em;
+          background-color: #0c6efd;
+          border: none;
+          color: white;
+          cursor: pointer;
+        "
+      >
+        Upload
+      </button>
+    </div>
+  </form>
+</div>
+{% endblock %}
