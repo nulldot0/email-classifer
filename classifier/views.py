@@ -3,9 +3,9 @@ import logging
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import path
-from readers.csv_reader import CSVByteReader
 
 from classifier.models import Email
+from classifier.readers.csv_reader import CSVByteReader
 
 from .forms import UploadFileForm
 
